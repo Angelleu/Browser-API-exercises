@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+          
+          var sec =window.prompt(`How many seconds you would like to saty in our site?`);
+         
+          var countdown = function() {
+            if (sec != 0)
+
+            {console.log(`${sec = sec-1} seconds left`)}
+
+            else if (sec == 0) {window.alert('Your session has expired, come again soon!');}
+            clearInterval(countdown);
+            }
+            
+            var id= setInterval(countdown,1000);
+           
+
+
+          </script>
+    </head>
+    <body>
+          <p>
+           Hi, exercise 13
+          </p>
+    </body>
+</html>

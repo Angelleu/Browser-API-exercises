@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let newURL=window.prompt('Please input a complete URL:');
+            if(newURL.includes('http://')){
+              location.href=newURL;
+            }else{
+              location.href='http://'+newURL;
+            }
+          </script>
+    </head>
+    <body>
+          <p>
+           Hi, exercise 9 <br>
+           Create a basic HTML document<br>
+            Create a script tag on the document head element<br>
+            Ask the user to input a complete URL<br>
+            Redirect the user to the new location<br>
+          </p>
+    </body>
+</html>

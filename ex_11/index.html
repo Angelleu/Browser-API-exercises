@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+          const username=window.prompt('Please to input your username:','');;
+           
+           window.prompt('Please input your password:');
+           window.alert(`Welcome ${username}`);
+            
+            
+            
+            const greet = function(){
+
+                var confirm = window.confirm(`Do you still want to be logged ${username}`);
+                    if(confirm==true){
+                    window.alert(`${username}, your session has been restored`);
+                }else{
+                    window.alert(`${username}, your session has expired`);
+                }
+           }
+            setTimeout(greet,10000);
+        
+        
+          
+           
+                 </script>
+    </head>
+    <body>
+          <p>
+           Hi, exercise 11 <br>
+           Create a basic HTML document <br>
+            Create a script tag on the document head element <br>
+            Ask the user to input his username <br>
+            Ask the user to input his password <br>
+            Show the following alert message <br>
+            Welcome %username% <br>
+            After 10 seconds and for one time only show the following message to the user <br>
+            Do you still want to be logged? <br>
+            If the user confirms that he wants to be logged show the following message: <br>
+            %username% your session has been restored <br>
+            Else show the following message <br>
+            %username% your session has expaired <br>
+    
+          </p>
+    </body>
+</html>
