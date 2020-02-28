@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Setting attributes</title>
+  <script>
+      window.onload=function(){
+        
+        //Select the h1 and div element and assign them to a new variable
+        
+        const h1Element=document.querySelector('h1');
+        const divElement=document.querySelector('div');
+        
+        //If any of these elements has attributes then add the striked class to both of them
+        //Else add the bold class
+
+        if(divElement.hasAttributes() || h1Element.hasAttributes()){
+           h1Element.setAttribute('class','strike')
+            // console.log(h1Element.hasAttributes(),h1Element.getAttribute('class'))
+           divElement.setAttribute('class','strike');
+            //console.log(divElement.hasAttributes(),divElement.getAttribute('class'))
+        }else{
+            h1Element.setAttribute('class','bold');
+            //console.log(h1Element.hasAttributes(),h1Element.getAttribute('class'))
+            divElement.setAttribute('class','bold');
+            //console.log(h1Element.hasAttributes(),h1Element.getAttribute('class'))
+        }
+
+        
+            //Remove the name attribute from the div element (use the web console elements tab to see the result)
+            divElement.removeAttribute('name');
+        }
+  </script>
+  <style>
+    .bold {
+      font-weight: bold;
+    }
+    
+    .striked {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1 id='menu'>Playing with attributes</h1>
+  <div  name="divy" >We have more control over our documents as we learn about JavaScript and DOM elements!!!</div>
+</body>
+</html>
