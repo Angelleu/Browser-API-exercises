@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <script>
+      window.onload=function(){
+          
+          //Select the ul element
+            //Show the ul children elements as output
+          const ulElem=document.querySelector('ul');
+          const children=ulElem.children;
+            console.log(children);
+           
+           //Select the 2nd child element, assign it to a variable and assign the green class to it
+            const secondChild=children[1];
+            console.log(secondChild);
+            secondChild.setAttribute('class','green');
+            
+            //Select the 4th child element, assign it to a variable and assign the red class to it
+            const fourthChild=children[3];
+            console.log(fourthChild)
+            fourthChild.setAttribute('class','red')
+            
+            //Use the selected child elements to show the parent one as output
+
+            
+            const childList=document.querySelector('li')
+            const parent=childList.parentElement;
+            console.log(parent)
+            
+            //Using one of the child elements get a reference to the parent and add the orange class to it
+            
+            parent.setAttribute('class','orange')
+      }
+  </script>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>
