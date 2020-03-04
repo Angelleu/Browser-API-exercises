@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <script>
+      window.onload=function(){
+         
+         //Select the first list item element and add the orange class
+          const firstLi=document.querySelector('li');
+          firstLi.setAttribute('class','orange')
+         
+         //Using the selected element select the following element using nextElementSibling and add the orange class
+         //Keep doing this until there's no more siblings
+          const nextElem=firstLi.nextElementSibling;
+          console.log(nextElem.setAttribute('class','orange'))
+            const thirdElem=nextElem.nextElementSibling;
+            console.log(thirdElem.setAttribute('class','orange'))
+            const fourElem=thirdElem.nextElementSibling;
+            console.log(fourElem.setAttribute('class','orange'))
+            const fifthElem=fourElem.nextElementSibling;
+            console.log(fifthElem.setAttribute('class','orange'))
+            
+            //Now we need to go back using previousElementSibling
+            //Add red class to Item 3
+            //Add green class to Item 1
+            fourElem.previousElementSibling.setAttribute('class','red');
+            nextElem.previousElementSibling.setAttribute('class','green');
+      
+      }
+  </script>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>
