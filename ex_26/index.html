@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+        window.onload=function(){
+            const bodyElem=document.querySelector('body')
+            const name=['A','B','C','D','E'
+                        ,'F','G','H','I','J']
+            const ulElem=document.createElement('ul')
+            name.forEach(function(item){
+                const liElem=document.createElement('li')
+                const text =document.createTextNode(item)
+                liElem.appendChild(text);
+                ulElem.appendChild(liElem);
+            })
+
+            document.body.appendChild(ulElem);
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
