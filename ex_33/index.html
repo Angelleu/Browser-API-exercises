@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    // not done yet
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+    <script>
+          let button=document.querySelector('firstButton');
+          firstButton.addEventListener('click',function(){
+            window.alert('You clicked an event listened element')
+          })
+          let secondbutton=document.querySelector('secondButton');
+          secondButton.addEventListener('dblclick',function(){
+            console.log('it is error')
+          })
+      </script>
+  </body>
+</html>
