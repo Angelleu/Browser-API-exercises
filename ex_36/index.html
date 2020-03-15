@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+    <script>
+        let html=document.querySelector('html');
+        html.addEventListener('click',function(event){
+            console.log(`Click possition:x-axis: ${event.clientX}, y-axis:${event.clientY}`)
+        });
+    </script>
+  </head>
+  <body>
+      <a href="contact.html">Go to contact page</a>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <script>
+    
+    let link=document.querySelector('a');
+    link.addEventListener('click',function(event){
+        event.preventDefault();
+        console.log("look someone click me");
+        window.alert('This does\'t send us to a different page as we\'re preventing the default behaviour');
+    })
+    
+    let greeting = function (){ alert('Hi')}
+       let firstButton=document.getElementById('firstButton')
+        let secondButton=document.getElementById('secondButton')
+         
+         firstButton.addEventListener('click',greeting)      
+         
+        secondButton.addEventListener('click',function(){
+            firstButton.removeEventListener('click',greeting)
+        })
+        
+    </script>
+  </body>
+</html>
