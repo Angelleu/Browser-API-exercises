@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <div></div>
+  
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+  
+    <script>
+      /*  let counter = 0;
+      document
+        .getElementById("firstButton")
+        .addEventListener("dblclick", () => {
+          counter++;
+          document.querySelector("div").innerText = counter;});*/
+        let count=0;
+        let firstButton=document.getElementById('firstButton');
+        
+        firstButton.addEventListener('dblclick',function(event){
+            count++;
+            let div=document.querySelector('div');
+            div.innerText = count;
+        })
+    </script>
+    
+
+</body>
+</html>
