@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <style>
+    .error { 
+      color: red; 
+      background-color: pink;
+      border: 1px solid red;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" placeholder=username />
+    <input type="password" id="pass" name="pass" placeholder="password" />
+    <input type="text" id="email" name="email" placeholder="email" >
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div id="errors"></div>
+  <script>
+      let form=document.querySelector('form');
+      let username=document.querySelector("input[type=text]");
+      let password=document.querySelector("input[type=password]");
+      let email=document.querySelector('input[name=email]');
+
+      const validateUser=function(username){
+          const regex = /^[a-z0-9]+$/i;
+          return regex.test(username)
+      }
+      const validatePassword=function(password){
+        const regex = /^[a-z0-9]+$/i;
+        return regex.test(password)
+      }
+      const validateEmail = function(email) {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return emailRegex.test(email);
+      };
+
+      const error=()=> alert("Invalid user input. Please try again");
+      
+      form.addEventListener('submit',function(event){
+          event.preventDefault();
+          if(username.value ==='' ||
+           password.value ==='' ||
+           !validateUser(username)|| 
+           !validatePassword(password)
+          ){
+             error();
+            if (username.value ==='') username.classList.add("error");
+            if(password.value ==='') password.classLis.add('error');
+            alert(`Please input a username and password`);
+          }
+            
+      })
+  </script>
+</body>
+</html>

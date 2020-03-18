@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <script>
+      let form=document.querySelector('form');
+      let username=document.querySelector("input[type=text]");
+      let password=document.querySelector("input[type=password]");
+      username.onfocus=()=>{
+          username.style.boxShadow="1px 1px 1px red";
+      }
+      username.onblur =()=>{
+          username.style.boxShadow="";
+      }
+      password.onfocus=()=>{
+          password.style.boxShadow="1px 1px 1px red";
+      }
+      password.onblur =()=>{
+          password.style.boxShadow="";
+      }
+
+      form.addEventListener('submit',function(event){
+          event.preventDefault();
+          alert(`Username: ${username.value}. Password:${password.value}`);
+      })
+
+    </script>
+</body>
+</html>
